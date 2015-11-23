@@ -15,7 +15,26 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+Route::get('admin/home', 'AdminController@index');
+
+Route::get('admin/add', 'AdminController@create');
+
+Route::get('admin/save', 'AdminController@store');
+
+Route::get('/images/{filename}',
+	function ($filename)
+{
+	$path = storage_path() . '/' .$filename;
+
+	$file = File::get($path);
+	$type = File::mimeType($path);
+
+	$response = Response::make($file,200);
+	$response->header("Content-Type", $type);
+
+	return $response;
+});
+// Route::controllers([
+// 	'auth' => 'Auth\AuthController',
+// 	'password' => 'Auth\PasswordController',
+// ]);
