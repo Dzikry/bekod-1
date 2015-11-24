@@ -13,27 +13,16 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('home', 'HomeController@index');
+// Route::get('home', 'HomeController@index');
 
-Route::get('admin/home', 'AdminController@index');
+Route::get('/artikel','ArtikelController@home');
 
-Route::get('admin/add', 'AdminController@create');
+Route::get('/artikel/list/{slug}','ArtikelController@getartikel');
 
-Route::get('admin/save', 'AdminController@store');
+Route::get('/artikel/add','ArtikelController@postartikel');
 
-Route::get('/images/{filename}',
-	function ($filename)
-{
-	$path = storage_path() . '/' .$filename;
+Route::post('/artikel/save','ArtikelController@saveartikel');
 
-	$file = File::get($path);
-	$type = File::mimeType($path);
-
-	$response = Response::make($file,200);
-	$response->header("Content-Type", $type);
-
-	return $response;
-});
 // Route::controllers([
 // 	'auth' => 'Auth\AuthController',
 // 	'password' => 'Auth\PasswordController',
