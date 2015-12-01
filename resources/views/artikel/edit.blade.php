@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Belajar Koding - Semua Artikel</title>
+		<title>Material Admin - Compose mail</title>
 
 		<!-- BEGIN META -->
 		<meta charset="utf-8">
@@ -16,6 +16,7 @@
 		<link type="text/css" rel="stylesheet" href="/css/theme-default/materialadmin.css?1425466319" />
 		<link type="text/css" rel="stylesheet" href="/css/theme-default/font-awesome.min.css?1422529194" />
 		<link type="text/css" rel="stylesheet" href="/css/theme-default/material-design-iconic-font.min.css?1421434286" />
+		<link type="text/css" rel="stylesheet" href="/css/theme-default/libs/summernote/summernote.css?1425218701" />
 		<!-- END STYLESHEETS -->
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -24,18 +25,18 @@
 		<script type="text/javascript" src="/js/libs/utils/respond.min.js?1403934956"></script>
 		<![endif]-->
 	</head>
-	<body class="menubar-hoverable header-fixed ">
+	<body class="menubar-hoverable header-fixed menubar-first full-content ">
 
 		<!-- BEGIN HEADER-->
-		<header id="header" class="header-inverse ">
+		<header id="header" >
 			<div class="headerbar">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="headerbar-left">
 					<ul class="header-nav header-nav-options">
 						<li class="header-nav-brand" >
 							<div class="brand-holder">
-								<a href="../../../html/dashboards/dashboard.html">
-									<span class="text-lg text-bold text-primary">Belajar Koding</span>
+								<a href="../../html/dashboards/dashboard.html">
+									<span class="text-lg text-bold text-primary">MATERIAL ADMIN</span>
 								</a>
 							</div>
 						</li>
@@ -79,8 +80,8 @@
 									</a>
 								</li>
 								<li class="dropdown-header">Options</li>
-								<li><a href="../../../html/pages/login.html">View all messages <span class="pull-right"><i class="fa fa-arrow-right"></i></span></a></li>
-								<li><a href="../../../html/pages/login.html">Mark as read <span class="pull-right"><i class="fa fa-arrow-right"></i></span></a></li>
+								<li><a href="../../html/pages/login.html">View all messages <span class="pull-right"><i class="fa fa-arrow-right"></i></span></a></li>
+								<li><a href="../../html/pages/login.html">Mark as read <span class="pull-right"><i class="fa fa-arrow-right"></i></span></a></li>
 							</ul><!--end .dropdown-menu -->
 						</li><!--end .dropdown -->
 						<li class="dropdown hidden-xs">
@@ -124,18 +125,18 @@
 							<a href="javascript:void(0);" class="dropdown-toggle ink-reaction" data-toggle="dropdown">
 								<img src="/img/avatar1.jpg?1403934956" alt="" />
 								<span class="profile-info">
-									Admin
+									Daniel Johnson
 									<small>Administrator</small>
 								</span>
 							</a>
 							<ul class="dropdown-menu animation-dock">
 								<li class="dropdown-header">Config</li>
-								<li><a href="../../../html/pages/profile.html">My profile</a></li>
-								<li><a href="../../../html/pages/blog/post.html">My blog <span class="badge style-danger pull-right">16</span></a></li>
-								<li><a href="../../../html/pages/calendar.html">My appointments</a></li>
+								<li><a href="../../html/pages/profile.html">My profile</a></li>
+								<li><a href="../../html/pages/blog/post.html">My blog <span class="badge style-danger pull-right">16</span></a></li>
+								<li><a href="../../html/pages/calendar.html">My appointments</a></li>
 								<li class="divider"></li>
-								<li><a href="../../../html/pages/locked.html"><i class="fa fa-fw fa-lock"></i> Lock</a></li>
-								<li><a href="../../../html/pages/login.html"><i class="fa fa-fw fa-power-off text-danger"></i> Logout</a></li>
+								<li><a href="../../html/pages/locked.html"><i class="fa fa-fw fa-lock"></i> Lock</a></li>
+								<li><a href="../../html/pages/login.html"><i class="fa fa-fw fa-power-off text-danger"></i> Logout</a></li>
 							</ul><!--end .dropdown-menu -->
 						</li><!--end .dropdown -->
 					</ul><!--end .header-nav-profile -->
@@ -161,160 +162,64 @@
 
 			<!-- BEGIN CONTENT-->
 			<div id="content">
-				<section>
-					<div class="section-header">
-						<ol class="breadcrumb">
-							<li class="active">Semua Artikel</li>
-						</ol>
-					</div>
-					<div class="section-body">					
+				<section class="has-actions style-default-bright">
+
+					<!-- BEGIN INBOX -->
+					<div class="section-body">
 						<div class="row">
-							<div class="col-lg-12">
-							<a href="/artikel/add"><button type="button" class="btn ink-reaction btn-raised btn-primary">Buat Artikel</button></a>
-							<p>
-								<!-- BEGIN BLOG MASONRY -->
-								<div class="card card-type-blog-masonry style-default-bright">
-									<div class="row">
-										<div class="col-md-3">
-											<article>
-												<div class="card-body style-default-dark text-center">
-													<h3><i class="fa fa-quote-left"></i> Some quote <i class="fa fa-quote-right"></i></h3>
-												</div>
-												<div class="card-body blog-text">
-													<div class="opacity-50">Posted on Feb 20 by <a href="#">Admin</a> | <a href="#">2 comments <i class="fa fa-comment-o"></i></a></div>
-													<h4><a class="link-default" href="../../../html/pages/blog/post.html">Consectetur adipisicing elit</a></h4>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
-													<a class="btn btn-default" href="/artikel/list">Read more</a>
-												</div>
-											</article><!-- end /article -->
-											<article>
-												<div class="blog-image">
-													<img src="/img/img2.jpg?1403934956" alt="" />
-												</div>
-												<div class="card-body blog-text">
-													<div class="opacity-50">Posted on Feb 20 by <a href="#">Admin</a> | <a href="#">2 comments <i class="fa fa-comment-o"></i></a></div>
-													<h3><a class="link-default" href="../../../html/pages/blog/post.html">Cupidatat non proident</a></h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-													<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-												</div>
-											</article><!-- end /article -->
-											<article>
-												<div class="card-body style-primary-light">
-													<div class="opacity-75">Posted on Feb 20 by <a href="#">Admin</a> | <a href="#">2 comments <i class="fa fa-comment-o"></i></a></div>
-													<h3><a class="link-default" href="../../../html/pages/blog/post.html">Cupidatat non proident</a></h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-													<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-												</div>
-											</article><!-- end /article -->
-										</div><!--end .col -->
-										<div class="col-md-3">
-										@foreach($artikel as $artikel)
-											<article>
-												<div class="blog-image">
-													<img class="img-responsive" src="{{ url('images/'.$artikel->sampul)}}" alt="" />
-												</div>
-												<div class="card-body blog-text">
-													<div class="opacity-50">Posted on Feb 20 by <a href="#">{{ $artikel->author}}</a> | <a href="#">2 comments <i class="fa fa-comment-o"></i></a></div>
-													<h3><a class="link-default" href="{{ url('/artikel/list/$artikel->judul') }}">{{$artikel->judul}}</a></h3>
-													<p>{{ $artikel->isi}}</p>
+
+							<!-- BEGIN INBOX NAV -->
+							
+							<!-- END INBOX NAV -->
+
+							<!-- BEGIN MAIL COMPOSE -->
+							<div class="col-sm-8 col-md-9 col-lg-10">
+								<h3>Buat Artikel</h3>
+								<form class="form" id="formCompose" role="form" action="{{ url('artikel/update') }}" method="POST" enctype="multipart/form-data">
+								@foreach($data as $data[0])
+									<div class="form-group floating-label">
+										<input type="text" class="form-control" id="to1" name="author" value="{{ $data->author}}" >
+										<label for="to1">Author</label>
 										
-												</div>
-											</article><!-- end /article -->
-											@endforeach
-											<article>
-												<div class="blog-image">
-													<img class="img-responsive" src="/img/img4.jpg?1403934955" alt="" />
-												</div>
-												<div class="card-body blog-text">
-													<div class="opacity-50">Posted on Feb 20 by <a href="#">Admin</a> | <a href="#">2 comments <i class="fa fa-comment-o"></i></a></div>
-													<h3><a class="link-default" href="../../../html/pages/blog/post.html">Tempor incididunt elit</a></h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-													<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-												</div>
-											</article><!-- end /article -->
-										</div>
-										<div class="col-md-3">
-											<article>
-												<div class="card-body style-primary blog-text">
-													<div class="opacity-50">Posted on Feb 20 by <a href="#">Admin</a> | <a href="#">2 comments <i class="fa fa-comment-o"></i></a></div>
-													<h3><a class="link-default" href="../../../html/pages/blog/post.html">Exercitation ullamco</a></h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-													<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-												</div>
-												<div class="blog-image">
-													<img class="img-responsive" src="/img/img5.jpg?1403934955" alt="" />
-												</div>
-											</article><!-- end /article -->
-											<article>
-												<div class="card-body blog-text">
-													<div class="opacity-50">Posted on Feb 20 by <a href="#">Admin</a> | <a href="#">2 comments <i class="fa fa-comment-o"></i></a></div>
-													<h3><a class="link-default" href="../../../html/pages/blog/post.html">Exercitation ullamco</a></h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-													<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-												</div>
-												<div class="card-body text-center style-default-dark">
-													<h3><i class="fa fa-quote-left"></i> Some quote <i class="fa fa-quote-right"></i></h3>
-												</div>
-												<div class="card-body text-center card-body-darken style-default-dark">
-													<h4><i class="fa fa-quote-left"></i> Another one for the books <i class="fa fa-quote-right"></i></h4>
-												</div>
-											</article><!-- end /article -->
-										</div><!--end .col -->
-										<div class="col-md-3">
-											<article>
-												<div class="blog-image">
-													<img class="img-responsive" src="/img/img6.jpg?1403934955" alt="" />
-												</div>
-												<div class="card-body blog-text">
-													<div class="opacity-50">Posted on Feb 20 by <a href="#">Admin</a> | <a href="#">2 comments <i class="fa fa-comment-o"></i></a></div>
-													<h3><a class="link-default" href="../../../html/pages/blog/post.html">Exercitation ullamco</a></h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-													<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-												</div>
-											</article><!-- end /article -->
-											<article>
-												<div class="blog-image">
-													<img class="img-responsive" src="/img/img7.jpg?1403934957" alt="" />
-												</div>
-												<div class="card-body blog-text style-primary-dark">
-													<div class="opacity-50">Posted on Feb 20 by <a href="#">Admin</a> | <a href="#">2 comments <i class="fa fa-comment-o"></i></a></div>
-													<h3><a class="link-default" href="../../../html/pages/blog/post.html">Exercitation ullamco</a></h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-													<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-													<p>Excepteur sint occaecat cupidatat non proide</p>
-												</div>
-											</article><!-- end /article -->
-										</div><!--end .col -->
-									</div><!--end .row -->
-								</div><!--end .card -->
-								<!-- END BLOG MASONRY -->
-
+									</div><!--end #emailOptions -->
+									<div class="form-group floating-label">
+										<input type="text" class="form-control" id="Subject1" name="judul" value="{{$data->judul}}" >
+										<input type="hidden" name="_token" value="{{ csrf_token() }}">
+										<label for="Subject1">Judul</label>
+									</div><!--end .form-group -->
+									<div class="form-group">
+										<textarea id="simple-summernote" name="message" class="form-control control-6-rows" spellcheck="false">{{$data->isi}}</textarea>
+									</div><!--end .	form-group -->
+									<div class="form-group">
+                      <h3><label for="exampleInputFile">Photo input</label></h3>
+                      <input type="file" name="gambar" id="exampleInputFile" class="btn ink-reaction btn-raised btn-primary" value="{{$data->sampul}}">
+                    </div>
+                    @endforeach
+								</form>
 							</div><!--end .col -->
-						</div><!--end .row -->
+							<!-- END MAIL COMPOSE -->
 
-						<!-- BEGIN PAGINATION -->
-						<div class="row">
-							<div class="col-lg-12 text-center">
-								<ul class="pagination pagination-lg">
-									<li class="disabled"><a href="#">«</a></li>
-									<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-									<li><a href="#">2</a></li>
-									<li><a href="#">3</a></li>
-									<li><a href="#">4</a></li>
-									<li><a href="#">5</a></li>
-									<li><a href="#">»</a></li>
-								</ul>
-							</div><!--end .col -->
 						</div><!--end .row -->
-						<!-- END PAGINATION -->
-
 					</div><!--end .section-body -->
+					<!-- END INBOX -->
+
+					<!-- BEGIN SECTION ACTION -->
+					<div class="section-action style-primary">
+						<div class="section-action-row">
+							<a class="btn ink-reaction btn-icon-toggle" href="/artikel"><i class="fa fa-chevron-left"></i></a>
+						</div>
+						<div class="section-floating-action-row">
+							<a class="btn ink-reaction btn-floating-action btn-lg btn-accent" href="#formCompose" data-submit="form"><i class="md md-send"></i></a>
+						</div>
+					</div>
+					<!-- END SECTION ACTION -->
+
 				</section>
 			</div><!--end #content-->
 			<!-- END CONTENT -->
 
 			<!-- BEGIN MENUBAR-->
-			<div id="menubar" class="">
+			<div id="menubar" class="menubar-inverse ">
 				<div class="menubar-fixed-panel">
 					<div>
 						<a class="btn btn-icon-toggle btn-default menubar-toggle" data-toggle="menubar" href="javascript:void(0);">
@@ -322,7 +227,7 @@
 						</a>
 					</div>
 					<div class="expanded">
-						<a href="../../../html/dashboards/dashboard.html">
+						<a href="../../html/dashboards/dashboard.html">
 							<span class="text-lg text-bold text-primary ">MATERIAL&nbsp;ADMIN</span>
 						</a>
 					</div>
@@ -334,7 +239,7 @@
 
 						<!-- BEGIN DASHBOARD -->
 						<li>
-							<a href="../../../html/dashboards/dashboard.html" >
+							<a href="../../html/dashboards/dashboard.html" >
 								<div class="gui-icon"><i class="md md-home"></i></div>
 								<span class="title">Dashboard</span>
 							</a>
@@ -349,17 +254,17 @@
 							</a>
 							<!--start submenu -->
 							<ul>
-								<li><a href="../../../html/mail/inbox.html" ><span class="title">Inbox</span></a></li>
-								<li><a href="../../../html/mail/compose.html" ><span class="title">Compose</span></a></li>
-								<li><a href="../../../html/mail/reply.html" ><span class="title">Reply</span></a></li>
-								<li><a href="../../../html/mail/message.html" ><span class="title">View message</span></a></li>
+								<li><a href="../../html/mail/inbox.html" ><span class="title">Inbox</span></a></li>
+								<li><a href="../../html/mail/compose.html" class="active"><span class="title">Compose</span></a></li>
+								<li><a href="../../html/mail/reply.html" ><span class="title">Reply</span></a></li>
+								<li><a href="../../html/mail/message.html" ><span class="title">View message</span></a></li>
 							</ul><!--end /submenu -->
 						</li><!--end /menu-li -->
 						<!-- END EMAIL -->
 
 						<!-- BEGIN DASHBOARD -->
 						<li>
-							<a href="../../../html/layouts/builder.html" >
+							<a href="../../html/layouts/builder.html" >
 								<div class="gui-icon"><i class="md md-web"></i></div>
 								<span class="title">Layouts</span>
 							</a>
@@ -374,26 +279,26 @@
 							</a>
 							<!--start submenu -->
 							<ul>
-								<li><a href="../../../html/ui/colors.html" ><span class="title">Colors</span></a></li>
-								<li><a href="../../../html/ui/typography.html" ><span class="title">Typography</span></a></li>
-								<li><a href="../../../html/ui/cards.html" ><span class="title">Cards</span></a></li>
-								<li><a href="../../../html/ui/buttons.html" ><span class="title">Buttons</span></a></li>
-								<li><a href="../../../html/ui/lists.html" ><span class="title">Lists</span></a></li>
-								<li><a href="../../../html/ui/tabs.html" ><span class="title">Tabs</span></a></li>
-								<li><a href="../../../html/ui/accordions.html" ><span class="title">Accordions</span></a></li>
-								<li><a href="../../../html/ui/messages.html" ><span class="title">Messages</span></a></li>
-								<li><a href="../../../html/ui/offcanvas.html" ><span class="title">Off-canvas</span></a></li>
-								<li><a href="../../../html/ui/grid.html" ><span class="title">Grid</span></a></li>
+								<li><a href="../../html/ui/colors.html" ><span class="title">Colors</span></a></li>
+								<li><a href="../../html/ui/typography.html" ><span class="title">Typography</span></a></li>
+								<li><a href="../../html/ui/cards.html" ><span class="title">Cards</span></a></li>
+								<li><a href="../../html/ui/buttons.html" ><span class="title">Buttons</span></a></li>
+								<li><a href="../../html/ui/lists.html" ><span class="title">Lists</span></a></li>
+								<li><a href="../../html/ui/tabs.html" ><span class="title">Tabs</span></a></li>
+								<li><a href="../../html/ui/accordions.html" ><span class="title">Accordions</span></a></li>
+								<li><a href="../../html/ui/messages.html" ><span class="title">Messages</span></a></li>
+								<li><a href="../../html/ui/offcanvas.html" ><span class="title">Off-canvas</span></a></li>
+								<li><a href="../../html/ui/grid.html" ><span class="title">Grid</span></a></li>
 								<li class="gui-folder">
 									<a href="javascript:void(0);">
 										<span class="title">Icons</span>
 									</a>
 									<!--start submenu -->
 									<ul>
-										<li><a href="../../../html/ui/icons/materialicons.html" ><span class="title">Material Design Icons</span></a></li>
-										<li><a href="../../../html/ui/icons/fontawesome.html" ><span class="title">Font Awesome</span></a></li>
-										<li><a href="../../../html/ui/icons/glyphicons.html" ><span class="title">Glyphicons</span></a></li>
-										<li><a href="../../../html/ui/icons/skycons.html" ><span class="title">Skycons</span></a></li>
+										<li><a href="../../html/ui/icons/materialicons.html" ><span class="title">Material Design Icons</span></a></li>
+										<li><a href="../../html/ui/icons/fontawesome.html" ><span class="title">Font Awesome</span></a></li>
+										<li><a href="../../html/ui/icons/glyphicons.html" ><span class="title">Glyphicons</span></a></li>
+										<li><a href="../../html/ui/icons/skycons.html" ><span class="title">Skycons</span></a></li>
 									</ul><!--end /submenu -->
 								</li><!--end /menu-li -->
 							</ul><!--end /submenu -->
@@ -408,9 +313,9 @@
 							</a>
 							<!--start submenu -->
 							<ul>
-								<li><a href="../../../html/tables/static.html" ><span class="title">Static Tables</span></a></li>
-								<li><a href="../../../html/tables/dynamic.html" ><span class="title">Dynamic Tables</span></a></li>
-								<li><a href="../../../html/tables/responsive.html" ><span class="title">Responsive Table</span></a></li>
+								<li><a href="../../html/tables/static.html" ><span class="title">Static Tables</span></a></li>
+								<li><a href="../../html/tables/dynamic.html" ><span class="title">Dynamic Tables</span></a></li>
+								<li><a href="../../html/tables/responsive.html" ><span class="title">Responsive Table</span></a></li>
 							</ul><!--end /submenu -->
 						</li><!--end /menu-li -->
 						<!-- END TABLES -->
@@ -423,12 +328,12 @@
 							</a>
 							<!--start submenu -->
 							<ul>
-								<li><a href="../../../html/forms/basic.html" ><span class="title">Form basic</span></a></li>
-								<li><a href="../../../html/forms/advanced.html" ><span class="title">Form advanced</span></a></li>
-								<li><a href="../../../html/forms/layouts.html" ><span class="title">Form layouts</span></a></li>
-								<li><a href="../../../html/forms/editors.html" ><span class="title">Editors</span></a></li>
-								<li><a href="../../../html/forms/validation.html" ><span class="title">Form validation</span></a></li>
-								<li><a href="../../../html/forms/wizard.html" ><span class="title">Form wizard</span></a></li>
+								<li><a href="../../html/forms/basic.html" ><span class="title">Form basic</span></a></li>
+								<li><a href="../../html/forms/advanced.html" ><span class="title">Form advanced</span></a></li>
+								<li><a href="../../html/forms/layouts.html" ><span class="title">Form layouts</span></a></li>
+								<li><a href="../../html/forms/editors.html" ><span class="title">Editors</span></a></li>
+								<li><a href="../../html/forms/validation.html" ><span class="title">Form validation</span></a></li>
+								<li><a href="../../html/forms/wizard.html" ><span class="title">Form wizard</span></a></li>
 							</ul><!--end /submenu -->
 						</li><!--end /menu-li -->
 						<!-- END FORMS -->
@@ -447,9 +352,9 @@
 									</a>
 									<!--start submenu -->
 									<ul>
-										<li><a href="../../../html/pages/contacts/search.html" ><span class="title">Search</span></a></li>
-										<li><a href="../../../html/pages/contacts/details.html" ><span class="title">Contact card</span></a></li>
-										<li><a href="../../../html/pages/contacts/add.html" ><span class="title">Insert contact</span></a></li>
+										<li><a href="../../html/pages/contacts/search.html" ><span class="title">Search</span></a></li>
+										<li><a href="../../html/pages/contacts/details.html" ><span class="title">Contact card</span></a></li>
+										<li><a href="../../html/pages/contacts/add.html" ><span class="title">Insert contact</span></a></li>
 									</ul><!--end /submenu -->
 								</li><!--end /menu-li -->
 								<li class="gui-folder">
@@ -458,8 +363,8 @@
 									</a>
 									<!--start submenu -->
 									<ul>
-										<li><a href="../../../html/pages/search/results-text.html" ><span class="title">Results - Text</span></a></li>
-										<li><a href="../../../html/pages/search/results-text-image.html" ><span class="title">Results - Text and Image</span></a></li>
+										<li><a href="../../html/pages/search/results-text.html" ><span class="title">Results - Text</span></a></li>
+										<li><a href="../../html/pages/search/results-text-image.html" ><span class="title">Results - Text and Image</span></a></li>
 									</ul><!--end /submenu -->
 								</li><!--end /menu-li -->
 								<li class="gui-folder">
@@ -468,9 +373,9 @@
 									</a>
 									<!--start submenu -->
 									<ul>
-										<li><a href="../../../html/pages/blog/masonry.html" class="active"><span class="title">Blog masonry</span></a></li>
-										<li><a href="../../../html/pages/blog/list.html" ><span class="title">Blog list</span></a></li>
-										<li><a href="../../../html/pages/blog/post.html" ><span class="title">Blog post</span></a></li>
+										<li><a href="../../html/pages/blog/masonry.html" ><span class="title">Blog masonry</span></a></li>
+										<li><a href="../../html/pages/blog/list.html" ><span class="title">Blog list</span></a></li>
+										<li><a href="../../html/pages/blog/post.html" ><span class="title">Blog post</span></a></li>
 									</ul><!--end /submenu -->
 								</li><!--end /menu-li -->
 								<li class="gui-folder">
@@ -479,26 +384,26 @@
 									</a>
 									<!--start submenu -->
 									<ul>
-										<li><a href="../../../html/pages/404.html" ><span class="title">404 page</span></a></li>
-										<li><a href="../../../html/pages/500.html" ><span class="title">500 page</span></a></li>
+										<li><a href="../../html/pages/404.html" ><span class="title">404 page</span></a></li>
+										<li><a href="../../html/pages/500.html" ><span class="title">500 page</span></a></li>
 									</ul><!--end /submenu -->
 								</li><!--end /menu-li -->
-								<li><a href="../../../html/pages/profile.html" ><span class="title">User profile<span class="badge style-accent">42</span></span></a></li>
-								<li><a href="../../../html/pages/invoice.html" ><span class="title">Invoice</span></a></li>
-								<li><a href="../../../html/pages/calendar.html" ><span class="title">Calendar</span></a></li>
-								<li><a href="../../../html/pages/pricing.html" ><span class="title">Pricing</span></a></li>
-								<li><a href="../../../html/pages/timeline.html" ><span class="title">Timeline</span></a></li>
-								<li><a href="../../../html/pages/maps.html" ><span class="title">Maps</span></a></li>
-								<li><a href="../../../html/pages/locked.html" ><span class="title">Lock screen</span></a></li>
-								<li><a href="../../../html/pages/login.html" ><span class="title">Login</span></a></li>
-								<li><a href="../../../html/pages/blank.html" ><span class="title">Blank page</span></a></li>
+								<li><a href="../../html/pages/profile.html" ><span class="title">User profile<span class="badge style-accent">42</span></span></a></li>
+								<li><a href="../../html/pages/invoice.html" ><span class="title">Invoice</span></a></li>
+								<li><a href="../../html/pages/calendar.html" ><span class="title">Calendar</span></a></li>
+								<li><a href="../../html/pages/pricing.html" ><span class="title">Pricing</span></a></li>
+								<li><a href="../../html/pages/timeline.html" ><span class="title">Timeline</span></a></li>
+								<li><a href="../../html/pages/maps.html" ><span class="title">Maps</span></a></li>
+								<li><a href="../../html/pages/locked.html" ><span class="title">Lock screen</span></a></li>
+								<li><a href="../../html/pages/login.html" ><span class="title">Login</span></a></li>
+								<li><a href="../../html/pages/blank.html" ><span class="title">Blank page</span></a></li>
 							</ul><!--end /submenu -->
 						</li><!--end /menu-li -->
 						<!-- END FORMS -->
 
 						<!-- BEGIN CHARTS -->
 						<li>
-							<a href="../../../html/charts/charts.html" >
+							<a href="../../html/charts/charts.html" >
 								<div class="gui-icon"><i class="md md-assessment"></i></div>
 								<span class="title">Charts</span>
 							</a>
@@ -822,6 +727,9 @@
 		<script src="/js/libs/spin.js/spin.min.js"></script>
 		<script src="/js/libs/autosize/jquery.autosize.min.js"></script>
 		<script src="/js/libs/nanoscroller/jquery.nanoscroller.min.js"></script>
+		<script src="/js/libs/ckeditor/ckeditor.js"></script>
+		<script src="/js/libs/ckeditor/adapters/jquery.js"></script>
+		<script src="/js/libs/summernote/summernote.min.js"></script>
 		<script src="/js/core/source/App.js"></script>
 		<script src="/js/core/source/AppNavigation.js"></script>
 		<script src="/js/core/source/AppOffcanvas.js"></script>
@@ -830,6 +738,7 @@
 		<script src="/js/core/source/AppNavSearch.js"></script>
 		<script src="/js/core/source/AppVendor.js"></script>
 		<script src="/js/core/demo/Demo.js"></script>
+		<script src="/js/core/demo/DemoFormEditors.js"></script>
 		<!-- END JAVASCRIPT -->
 
 	</body>

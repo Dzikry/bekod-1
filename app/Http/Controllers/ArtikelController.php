@@ -67,10 +67,7 @@ class ArtikelController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
-	{
-		//
-	}
+	
 
 	/**
 	 * Remove the specified resource from storage.
@@ -85,7 +82,8 @@ class ArtikelController extends Controller {
 
 	public function home()
 	{
-		return view('artikel.home');
+		$artikel = \DB::table('posts')->get();
+		return view('artikel.home')->with('artikel',$artikel);
 	}
 
 	public function getartikel($slug)
@@ -100,7 +98,7 @@ class ArtikelController extends Controller {
 		return view('artikel.add');
 	}
 
-	public function saveartikel(Request $request)
+	public function saveartikel()
 	{
 		$post = new post;	
 		$post->author = Input::get('author');
@@ -119,17 +117,47 @@ class ArtikelController extends Controller {
 		
 		$post->save();
 		
-		return redirect(url('artikel/openssl_pkey_get_details(key)'));
+		return redirect(url('/artikel'));
 	}
 	
 
-	public function editartikel()
+	public function editartikel($id)
 	{
+		$data = array('data'=>post::find($id));
 
+		// dd($data);
+
+		return view('artikel.edit')->with($data);
+		
 	}
-	public function deleteartikel()
-	{
 
+	public function update()
+	{
+		$post = post::find(Input::get('id'));
+		$post->author = Input::get('author');
+		$post->judul = Input::get('judul');
+		$post->isi = Input::get('message');
+		$post->slug = str_slug(Input::get('judul'));
+
+		if(Input::hasFile('gambar')){
+			$sampul = date("YmdHis");
+			uniqid().".".Input::file('gambar')->getClientOriginalExtension();
+
+			Input::file('gambar')->move(storage_path(),$sampul);
+			$post->sampul = $sampul;
+		}
+
+		
+		$post->save();
+		
+		return redirect(url('/artikel'));
+	}
+
+	public function deleteartikel($id)
+	{
+		post::find($id)->delete();
+
+		return redirect(url('artikel'));
 	}
 
 }

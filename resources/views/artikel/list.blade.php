@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Material Admin - Blog post</title>
+	@foreach($data as $post)
+		<title>
+			Artikel - {{ $post->judul }}
+		</title>
+	@endforeach
 
 		<!-- BEGIN META -->
 		<meta charset="utf-8">
@@ -182,15 +186,16 @@
 												<div class="text-default-light">Posted by {{ $post->author }}</div>
 											</div>
 										</div><!--end .col -->
+										@foreach($data as $id)
 										<div class="col-sm-3">
 											<div class="card-body">
 												<div class="hidden-xs">
 													<h3 class="text-light"><strong>{{ $post->created_at}}</strong></h3>
 													<a href="#">2 comments <i class="fa fa-comment-o"></i></a>
 													<div class="stick-top-right">
-														<a class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Contact me"><i class="fa fa-envelope"></i></a><br/>
-														<a class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Follow me"><i class="fa fa-twitter"></i></a><br/>
-														<a class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Personal info"><i class="fa fa-facebook"></i></a>
+														<a href="{{ url('artikel/edit/'.$id->id) }}" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Edit Artikel"><i class="md md-mode-edit "></i></a><br/>
+														<a class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Share Artikel"><i class="md md-share "></i></a><br/>
+														<a href="{{url('artikel/delete/'.$id->id)}}" onclick="return confirm('Yakin Hapus ?')" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Hapus Artikel"><i class="md md-delete "></i></a>
 													</div>
 												</div>
 												<div class="visible-xs">
@@ -198,6 +203,7 @@
 												</div>
 											</div>
 										</div><!--end .col -->
+										@endforeach
 									</div><!--end .row -->
 									<!-- END BLOG POST HEADER -->
 
@@ -205,9 +211,10 @@
 
 										<!-- BEGIN BLOG POST TEXT -->
 										<div class="col-md-9">
+										@foreach($data as $gambar)
 											<article class="style-default-bright">
 												<div>
-													<img class="img-responsive" src="/img/img1.jpg?1403934956" alt="" />
+													<img class="img-responsive" src="{{ url('images/'.$gambar->sampul)}}" alt="" />
 												</div>
 												<div class="card-body">
 													{{ $post->isi }}

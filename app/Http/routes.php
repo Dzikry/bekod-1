@@ -23,6 +23,26 @@ Route::get('/artikel/add','ArtikelController@postartikel');
 
 Route::post('/artikel/save','ArtikelController@saveartikel');
 
+Route::get('/artikel/edit/{id}','ArtikelController@editartikel');
+
+Route::post('/artikel/update', 'ArtikelController@update');
+
+Route::get('/artikel/delete/{id}', 'ArtikelController@deleteartikel');
+
+Route::get('/images/{filename}', function($filename){
+
+	$path = storage_path() . '/image/' . $filename;
+	$file = File::get($path);
+	$type = File::mimetype($path);
+
+	$response = Respone::make($file, 200);
+	$response->header("Content-Type", $type);
+
+	return $response;
+});
+
+
+
 // Route::controllers([
 // 	'auth' => 'Auth\AuthController',
 // 	'password' => 'Auth\PasswordController',
