@@ -195,7 +195,7 @@
 													<div class="stick-top-right">
 														<a href="{{ url('artikel/edit/'.$id->id) }}" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Edit Artikel"><i class="md md-mode-edit "></i></a><br/>
 														<a class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Share Artikel"><i class="md md-share "></i></a><br/>
-														<a href="{{url('artikel/delete/'.$id->id)}}" onclick="return confirm('Yakin Hapus ?')" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Hapus Artikel"><i class="md md-delete "></i></a>
+														<a href="{{ url('artikel/delete/'.$id->id) }}" class="btn btn-icon-toggle" data-toggle="tooltip" data-placement="top" data-original-title="Hapus Artikel"><i class="md md-delete "></i></a>
 													</div>
 												</div>
 												<div class="visible-xs">
@@ -228,7 +228,8 @@
 											</article>
 										</div><!--end .col -->
 										<!-- END BLOG POST TEXT -->
-@endforeach
+										@endforeach
+										@endforeach
 										<!-- BEGIN BLOG POST MENUBAR -->
 										<div class="col-md-3">
 											<div class="card-body">

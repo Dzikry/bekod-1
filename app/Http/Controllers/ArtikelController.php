@@ -123,39 +123,46 @@ class ArtikelController extends Controller {
 
 	public function editartikel($id)
 	{
-		$data = array('data'=>post::find($id));
+		$data = \DB::table('posts')->where('id',$id)->get();
 
 		// dd($data);
 
-		return view('artikel.edit')->with($data);
+		return view('artikel.edit')->with('data',$data);
 		
 	}
 
 	public function update()
 	{
-		$post = post::find(Input::get('id'));
-		$post->author = Input::get('author');
-		$post->judul = Input::get('judul');
-		$post->isi = Input::get('message');
-		$post->slug = str_slug(Input::get('judul'));
 
 		if(Input::hasFile('gambar')){
 			$sampul = date("YmdHis");
 			uniqid().".".Input::file('gambar')->getClientOriginalExtension();
-
 			Input::file('gambar')->move(storage_path(),$sampul);
-			$post->sampul = $sampul;
+			$dataUpdate = array(
+				'author' => Input::get('author'), 
+				'judul' => Input::get('judul'), 
+				'isi' => Input::get('isi'), 
+				'slug' => Input::get('judul'),
+				'sampul' => $sampul
+			);
+		}
+		else{
+			$dataUpdate = array(
+				'author' => Input::get('author'), 
+				'judul' => Input::get('judul'), 
+				'isi' => Input::get('isi'), 
+				'slug' => Input::get('judul')
+			);	
 		}
 
-		
-		$post->save();
+		\DB::table('posts')->where('id',Input::get('id'))->update($dataUpdate);
 		
 		return redirect(url('/artikel'));
 	}
 
 	public function deleteartikel($id)
 	{
-		post::find($id)->delete();
+		\DB::table('posts')->where('id',$id)->delete();
 
 		return redirect(url('artikel'));
 	}

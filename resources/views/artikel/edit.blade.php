@@ -176,25 +176,24 @@
 							<div class="col-sm-8 col-md-9 col-lg-10">
 								<h3>Buat Artikel</h3>
 								<form class="form" id="formCompose" role="form" action="{{ url('artikel/update') }}" method="POST" enctype="multipart/form-data">
-								@foreach($data as $data[0])
+									<input type="hidden" name="id" value="{{ $data[0]->id }}">
 									<div class="form-group floating-label">
-										<input type="text" class="form-control" id="to1" name="author" value="{{ $data->author}}" >
+										<input type="text" class="form-control" id="to1" name="author" value="{{ $data[0]->author}}" >
 										<label for="to1">Author</label>
 										
 									</div><!--end #emailOptions -->
 									<div class="form-group floating-label">
-										<input type="text" class="form-control" id="Subject1" name="judul" value="{{$data->judul}}" >
+										<input type="text" class="form-control" id="Subject1" name="judul" value="{{$data[0]->judul}}" >
 										<input type="hidden" name="_token" value="{{ csrf_token() }}">
 										<label for="Subject1">Judul</label>
 									</div><!--end .form-group -->
 									<div class="form-group">
-										<textarea id="simple-summernote" name="message" class="form-control control-6-rows" spellcheck="false">{{$data->isi}}</textarea>
+										<textarea id="simple-summernote" name="isi" class="form-control control-6-rows" spellcheck="false">{{$data[0]->isi}}</textarea>
 									</div><!--end .	form-group -->
 									<div class="form-group">
                       <h3><label for="exampleInputFile">Photo input</label></h3>
-                      <input type="file" name="gambar" id="exampleInputFile" class="btn ink-reaction btn-raised btn-primary" value="{{$data->sampul}}">
+                      <input type="file" name="gambar" id="exampleInputFile" class="btn ink-reaction btn-raised btn-primary" value="{{$data[0]->sampul}}">
                     </div>
-                    @endforeach
 								</form>
 							</div><!--end .col -->
 							<!-- END MAIL COMPOSE -->
