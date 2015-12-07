@@ -13,6 +13,7 @@
 
 Route::get('/', 'WelcomeController@index');
 
+<<<<<<< HEAD
 Route::get('home', 'HomeController@index');
 
 Route::get('admin/home', 'AdminController@index');
@@ -44,10 +45,41 @@ Route::get('/images/{filename}',
 	$type = File::mimeType($path);
 
 	$response = Response::make($file,200);
+=======
+// Route::get('home', 'HomeController@index');
+
+Route::get('/artikel','ArtikelController@home');
+
+Route::get('/artikel/list/{slug}','ArtikelController@getartikel');
+
+Route::get('/artikel/add','ArtikelController@postartikel');
+
+Route::post('/artikel/save','ArtikelController@saveartikel');
+
+Route::get('/artikel/edit/{id}','ArtikelController@editartikel');
+
+Route::post('/artikel/update', 'ArtikelController@update');
+
+Route::get('/artikel/delete/{id}', 'ArtikelController@deleteartikel');
+
+Route::get('/images/{filename}', function($filename){
+
+	$path = storage_path() . '/image/' . $filename;
+	$file = File::get($path);
+	$type = File::mimetype($path);
+
+	$response = Respone::make($file, 200);
+>>>>>>> 76e22f397eb8e0a58863e5d7e00d325402b45482
 	$response->header("Content-Type", $type);
 
 	return $response;
 });
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 76e22f397eb8e0a58863e5d7e00d325402b45482
 // Route::controllers([
 // 	'auth' => 'Auth\AuthController',
 // 	'password' => 'Auth\PasswordController',

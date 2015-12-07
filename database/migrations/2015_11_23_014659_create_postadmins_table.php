@@ -17,6 +17,10 @@ class CreatePostadminsTable extends Migration {
 			$table->increments('id');
 			$table->string('judul');
 			$table->string('isi');
+<<<<<<< HEAD
+=======
+			$table->date('tanggal');
+>>>>>>> 76e22f397eb8e0a58863e5d7e00d325402b45482
 			$table->string('foto');
 			$table->timestamps();
 			$table->softDeletes();

@@ -7,7 +7,11 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
+<<<<<<< HEAD
     <title>BELAJAR KODING - ADMIN PANEL</title>
+=======
+    <title>DASHGUM - Bootstrap Admin Template</title>
+>>>>>>> 76e22f397eb8e0a58863e5d7e00d325402b45482
 
     <!-- Bootstrap core CSS -->
     <link href="{{ url('/css/bootstrap.css') }}" rel="stylesheet">
@@ -39,7 +43,11 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
+<<<<<<< HEAD
             <a href="/" class="logo"><b>DASHGUM FREE</b></a>
+=======
+            <a href="index.html" class="logo"><b>DASHGUM FREE</b></a>
+>>>>>>> 76e22f397eb8e0a58863e5d7e00d325402b45482
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->
@@ -183,7 +191,11 @@
             </div>
             <div class="top-menu">
               <ul class="nav pull-right top-menu">
+<<<<<<< HEAD
                     <li><a class="logout" href="{{ url('admin/login') }}">Logout</a></li>
+=======
+                    <li><a class="logout" href="login.html">Logout</a></li>
+>>>>>>> 76e22f397eb8e0a58863e5d7e00d325402b45482
               </ul>
             </div>
         </header>
@@ -202,7 +214,11 @@
                   <h5 class="centered">Marcel Newman</h5>
                     
                   <li class="mt">
+<<<<<<< HEAD
                       <a href="{{ url('admin/home') }}">
+=======
+                      <a href="index.html">
+>>>>>>> 76e22f397eb8e0a58863e5d7e00d325402b45482
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
@@ -232,6 +248,20 @@
                       </ul>
                   </li>
                   <li class="sub-menu">
+<<<<<<< HEAD
+=======
+                      <a href="javascript:;" >
+                          <i class="fa fa-book"></i>
+                          <span>Extra Pages</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="blank.html">Blank Page</a></li>
+                          <li><a  href="login.html">Login</a></li>
+                          <li><a  href="lock_screen.html">Lock Screen</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+>>>>>>> 76e22f397eb8e0a58863e5d7e00d325402b45482
                       <a class="active" href="javascript:;" >
                           <i class="fa fa-tasks"></i>
                           <span>Form</span>
@@ -246,8 +276,13 @@
                           <span>Data Tables</span>
                       </a>
                       <ul class="sub">
+<<<<<<< HEAD
                           <li><a  href="#">User Table</a></li>
                           <li><a  href="{{ url('admin/artikel') }}">Artikel Table</a></li>
+=======
+                          <li><a  href="basic_table.html">Basic Table</a></li>
+                          <li><a  href="responsive_table.html">Responsive Table</a></li>
+>>>>>>> 76e22f397eb8e0a58863e5d7e00d325402b45482
                       </ul>
                   </li>
                   <li class="sub-menu">
@@ -280,27 +315,45 @@
               <div class="col-lg-12">
                   <div class="form-panel">
                       <h4 class="mb"><i class="fa fa-angle-right"></i> Create New Artikel </h4>
+<<<<<<< HEAD
                       <form class="form-horizontal style-form" action="{{ url('admin/save') }}" method="POST">
+=======
+                      <form class="form-horizontal style-form" action="{{ url('') }}" method="POST">
+>>>>>>> 76e22f397eb8e0a58863e5d7e00d325402b45482
                           <div class="form-group">
                               <label class="col-sm-2 col-sm-2 control-label">Title</label>
                               <div class="col-sm-10">
                                   <input type="text" name="judul" class="form-control">
+<<<<<<< HEAD
                                   <input type="hidden" name="_token" value="{{ csrf_token() }}">
+=======
+>>>>>>> 76e22f397eb8e0a58863e5d7e00d325402b45482
                               </div>
                           </div>
                           <div class="form-group">
                               <label class="col-sm-2 col-sm-2 control-label">Content</label>
                               <div class="col-sm-10">
+<<<<<<< HEAD
                                   <textarea type="text" name="isi" class="form-control"></textarea>
+=======
+                                  <textarea type="text" class="form-control"></textarea>
+>>>>>>> 76e22f397eb8e0a58863e5d7e00d325402b45482
                               </div>
                           </div>
                           <div class="form-group">
                               <label class="col-sm-2 col-sm-2 control-label">Photo</label>
                               <div class="col-sm-10">
+<<<<<<< HEAD
                                   <input type="file" name="foto" class="form-control" style="padding: 0.1px;">
                               </div>
                           </div>
                           <center><button type="submit" class="btn btn-info" style="width: 20%; height: 25pt"> Send </button></center>
+=======
+                                  <input type="file" class="form-control" style="padding: 0.1px;">
+                              </div>
+                          </div>
+                          <center><button type="button" class="btn btn-info" style="width: 20%; height: 25pt"> Send </button></center>
+>>>>>>> 76e22f397eb8e0a58863e5d7e00d325402b45482
                       </form>
                   </div>
               </div><!-- col-lg-12-->       
@@ -310,6 +363,19 @@
       </section><!-- /MAIN CONTENT -->
 
       <!--main content end-->
+<<<<<<< HEAD
+=======
+      <!--footer start-->
+      <footer class="site-footer" style="margin-top: 10%">
+          <div class="text-center">
+              2015 - Belajar Koding
+              <a href="{{ url('admin/add') }}" class="go-top">
+                  <i class="fa fa-angle-up"></i>
+              </a>
+          </div>
+      </footer>
+      <!--footer end-->
+>>>>>>> 76e22f397eb8e0a58863e5d7e00d325402b45482
   </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
