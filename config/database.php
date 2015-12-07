@@ -54,10 +54,17 @@ return [
 
 		'mysql' => [
 			'driver'    => 'mysql',
+<<<<<<< HEAD
+			'host'      => 'localhost',
+			'database'  => 'belajar_koding',
+			'username'  => 'root',
+			'password'  => 'jakarta799',
+=======
 			'host'      => env('DB_HOST', 'localhost'),
 			'database'  => env('DB_DATABASE', 'forge'),
 			'username'  => env('DB_USERNAME', 'forge'),
 			'password'  => env('DB_PASSWORD', ''),
+>>>>>>> 76e22f397eb8e0a58863e5d7e00d325402b45482
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

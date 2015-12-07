@@ -7,7 +7,11 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
+<<<<<<< HEAD
+    <title>BELAJAR KODING - ADMIN PANEL</title>
+=======
     <title>DASHGUM - FREE Bootstrap Admin Template</title>
+>>>>>>> 76e22f397eb8e0a58863e5d7e00d325402b45482
 
     <!-- Bootstrap core CSS -->
     <link href="{{ url('/css/bootstrap.css') }}" rel="stylesheet">
@@ -218,7 +222,11 @@
                   <h5 class="centered">Marcel Newman</h5>
                     
                   <li class="mt">
+<<<<<<< HEAD
+                      <a class="active" href="{{ url('admin/home') }}">
+=======
                       <a class="active" href="/">
+>>>>>>> 76e22f397eb8e0a58863e5d7e00d325402b45482
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
@@ -249,6 +257,13 @@
                   </li>
                   <li class="sub-menu">
                       <a href="javascript:;" >
+<<<<<<< HEAD
+                          <i class="fa fa-tasks"></i>
+                          <span>Form</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="{{ url('admin/add') }}">Form Input </a></li>
+=======
                           <i class="fa fa-book"></i>
                           <span>Extra Pages</span>
                       </a>
@@ -265,6 +280,7 @@
                       </a>
                       <ul class="sub">
                           <li><a  href="{{ url('admin/add') }}">Form Components</a></li>
+>>>>>>> 76e22f397eb8e0a58863e5d7e00d325402b45482
                       </ul>
                   </li>
                   <li class="sub-menu">
@@ -273,8 +289,13 @@
                           <span>Data Tables</span>
                       </a>
                       <ul class="sub">
+<<<<<<< HEAD
+                          <li><a  href="#">User Data Table</a></li>
+                          <li><a  href="{{ url('admin/artikel') }}">Artikel Table</a></li>
+=======
                           <li><a  href="basic_table.html">Basic Table</a></li>
                           <li><a  href="responsive_table.html">Responsive Table</a></li>
+>>>>>>> 76e22f397eb8e0a58863e5d7e00d325402b45482
                       </ul>
                   </li>
                   <li class="sub-menu">
@@ -476,6 +497,8 @@
       </section>
 
       <!--main content end-->
+<<<<<<< HEAD
+=======
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
@@ -486,6 +509,7 @@
           </div>
       </footer>
       <!--footer end-->
+>>>>>>> 76e22f397eb8e0a58863e5d7e00d325402b45482
   </section>
     
     <script type="text/javascript">
