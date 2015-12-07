@@ -67,10 +67,7 @@ class ArtikelController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
-	{
-		//
-	}
+	
 
 	/**
 	 * Remove the specified resource from storage.
@@ -85,7 +82,8 @@ class ArtikelController extends Controller {
 
 	public function home()
 	{
-		return view('artikel.home');
+		$artikel = \DB::table('posts')->get();
+		return view('artikel.home')->with('artikel',$artikel);
 	}
 
 	public function getartikel($slug)
@@ -100,7 +98,7 @@ class ArtikelController extends Controller {
 		return view('artikel.add');
 	}
 
-	public function saveartikel(Request $request)
+	public function saveartikel()
 	{
 		$post = new post;	
 		$post->author = Input::get('author');
@@ -119,17 +117,54 @@ class ArtikelController extends Controller {
 		
 		$post->save();
 		
-		return redirect(url('artikel/openssl_pkey_get_details(key)'));
+		return redirect(url('/artikel'));
 	}
 	
 
-	public function editartikel()
+	public function editartikel($id)
 	{
+		$data = \DB::table('posts')->where('id',$id)->get();
 
+		// dd($data);
+
+		return view('artikel.edit')->with('data',$data);
+		
 	}
-	public function deleteartikel()
+
+	public function update()
 	{
 
+		if(Input::hasFile('gambar')){
+			$sampul = date("YmdHis");
+			uniqid().".".Input::file('gambar')->getClientOriginalExtension();
+			Input::file('gambar')->move(storage_path(),$sampul);
+			$dataUpdate = array(
+				'author' => Input::get('author'), 
+				'judul' => Input::get('judul'), 
+				'isi' => Input::get('isi'), 
+				'slug' => Input::get('judul'),
+				'sampul' => $sampul
+			);
+		}
+		else{
+			$dataUpdate = array(
+				'author' => Input::get('author'), 
+				'judul' => Input::get('judul'), 
+				'isi' => Input::get('isi'), 
+				'slug' => Input::get('judul')
+			);	
+		}
+
+		\DB::table('posts')->where('id',Input::get('id'))->update($dataUpdate);
+		
+		return redirect(url('/artikel'));
+	}
+
+	public function deleteartikel($id)
+	{
+		\DB::table('posts')->where('id',$id)->delete();
+
+		return redirect(url('artikel'));
 	}
 
 }
