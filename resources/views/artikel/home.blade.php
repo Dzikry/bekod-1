@@ -176,17 +176,7 @@
 								<div class="card card-type-blog-masonry style-default-bright">
 									<div class="row">
 										<div class="col-md-3">
-											<article>
-												<div class="card-body style-default-dark text-center">
-													<h3><i class="fa fa-quote-left"></i> Some quote <i class="fa fa-quote-right"></i></h3>
-												</div>
-												<div class="card-body blog-text">
-													<div class="opacity-50">Posted on Feb 20 by <a href="#">Admin</a> | <a href="#">2 comments <i class="fa fa-comment-o"></i></a></div>
-													<h4><a class="link-default" href="../../../html/pages/blog/post.html">Consectetur adipisicing elit</a></h4>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
-													<a class="btn btn-default" href="/artikel/list">Read more</a>
-												</div>
-											</article><!-- end /article -->
+										@foreach($artikel as $artikel)
 											<article>
 												<div class="blog-image">
 													<img src="/img/img2.jpg?1403934956" alt="" />
@@ -198,25 +188,19 @@
 													<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 												</div>
 											</article><!-- end /article -->
-											<article>
-												<div class="card-body style-primary-light">
-													<div class="opacity-75">Posted on Feb 20 by <a href="#">Admin</a> | <a href="#">2 comments <i class="fa fa-comment-o"></i></a></div>
-													<h3><a class="link-default" href="../../../html/pages/blog/post.html">Cupidatat non proident</a></h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-													<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-												</div>
-											</article><!-- end /article -->
+										@endforeach
+											<!-- end /article -->
 										</div><!--end .col -->
-										<div class="col-md-3">
+										<div class="col-md-3">										
 											<article>
 												<div class="blog-image">
-													<img class="img-responsive" src="/img/img3.jpg?1403934956" alt="" />
+													<img class="img-responsive" src="{{ url('images/'.$artikel->sampul)}}" alt="" />
 												</div>
 												<div class="card-body blog-text">
-													<div class="opacity-50">Posted on Feb 20 by <a href="#">Admin</a> | <a href="#">2 comments <i class="fa fa-comment-o"></i></a></div>
-													<h3><a class="link-default" href="../../../html/pages/blog/post.html">Anim mollit</a></h3>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-													<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+													<div class="opacity-50">Posted on Feb 20 by <a href="#"></a> | <a href="#">2 comments <i class="fa fa-comment-o"></i></a></div>
+													<h3><a class="link-default" href="/artikel/list/{{$artikel->judul}}"></a></h3>
+													<p></p>
+										
 												</div>
 											</article><!-- end /article -->
 											<article>

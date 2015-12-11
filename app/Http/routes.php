@@ -13,14 +13,45 @@
 
 Route::get('/', 'WelcomeController@index');
 
-<<<<<<< HEAD
+
 Route::get('home', 'HomeController@index');
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
-=======
+
+Route::get('admin/home', 'AdminController@index');
+
+Route::get('admin/add', 'AdminController@create');
+
+Route::post('admin/save', 'AdminController@store');
+
+Route::get('admin/artikel', 'AdminController@show');
+
+Route::get('admin/edit/{id}', 'AdminController@edit');
+
+Route::post('admin/update', 'AdminController@update');
+
+Route::get('admin', 'AdminController@login');
+
+Route::get('admin/register', 'AdminController@registration');
+
+Route::post('admin/regsave', 'AdminController@regsave');
+
+Route::get('admin/delete/{id}', 'AdminController@destroy');
+
+Route::get('/images/{filename}',
+	function ($filename)
+{
+	$path = storage_path() . '/' .$filename;
+
+	$file = File::get($path);
+	$type = File::mimeType($path);
+
+	$response = Response::make($file,200);
+});
 // Route::get('home', 'HomeController@index');
 
 Route::get('/artikel','ArtikelController@home');
@@ -31,8 +62,27 @@ Route::get('/artikel/add','ArtikelController@postartikel');
 
 Route::post('/artikel/save','ArtikelController@saveartikel');
 
+Route::get('/artikel/edit/{id}','ArtikelController@editartikel');
+
+Route::post('/artikel/update', 'ArtikelController@update');
+
+Route::get('/artikel/delete/{id}', 'ArtikelController@deleteartikel');
+
+Route::get('/images/{filename}', function($filename){
+
+	$path = storage_path() . '/image/' . $filename;
+	$file = File::get($path);
+	$type = File::mimetype($path);
+
+	$response = Respone::make($file, 200);
+	$response->header("Content-Type", $type);
+
+	return $response;
+});
+
+
+
 // Route::controllers([
 // 	'auth' => 'Auth\AuthController',
 // 	'password' => 'Auth\PasswordController',
 // ]);
->>>>>>> 43eed9da37497271efbd0d02474a8aa43f1cec1b
